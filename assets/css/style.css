@@ -1,0 +1,25 @@
+.card-price {
+    display: flex;
+    justify-content: end;
+   }
+
+   header {
+      border-bottom: 1px solid rgba(0, 0, 0, 1);
+   }
+
+   #search:focus {
+    border: navy;
+   }
+
+   @media(min-width: 764px) {
+       img {
+         max-height: 22vh;
+       }
+   }
+
+   @media(min-width: 1200px) {
+      img {
+        max-height: 35vh;
+      }
+   
+  }
