@@ -9,8 +9,16 @@ let app = {
     loadSettings() {
         let savedSearch = localStorage.getItem('search');
         let savedSortDirection = localStorage.getItem('sortDirection');
-        if (savedSearch) this.search = savedSearch;
-        if (savedSortDirection) this.sortDirection = savedSortDirection;
+
+        if (savedSearch) {
+            this.search = savedSearch;
+            document.querySelector('#search').value = savedSearch; 
+        }
+
+        if (savedSortDirection) {
+            this.sortDirection = savedSortDirection;
+            document.querySelector(`#sort-${savedSortDirection}`).checked = true;
+        }
     },
 
     saveSettings() {
